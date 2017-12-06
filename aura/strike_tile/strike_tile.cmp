@@ -30,7 +30,7 @@ License: BSD 3-Clause License
 
     <div class="{!'slds-tile' + if(v.variant != 'base', ' slds-media', '') + if(v.destroyable == true, ' st-destroyable', '')}">
         <aura:if isTrue="{!v.destroyable}">
-            <lightning:buttonIcon iconName="utility:close" variant="bare" alternativeText="Remove" class="slds-button st-remove" onclick="{!c.destroyTile}"/>
+            <lightning:buttonIcon iconName="utility:close" variant="inverse" alternativeText="Remove" class="slds-button st-remove" onclick="{!c.destroyTile}"/>
         </aura:if>
         
         <aura:if isTrue="{!or(or(v.variant == 'icon', v.variant == 'task'), v.variant == 'avatar')}">
