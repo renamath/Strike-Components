@@ -218,6 +218,13 @@ public with sharing class strike_lookupController {
 
                 // change later for user formatting?
                 label = String.join(addressComponents, ', ');
+            }  else if (fieldType == 'PICKLIST') {
+                for (Schema.PicklistEntry entry : fieldDescribe.getPicklistValues()) {
+                    if (entry.isActive() && entry.getValue() == label) {
+                        label = entry.getLabel();
+                        break;
+                    }
+                }
             }
         }
 
